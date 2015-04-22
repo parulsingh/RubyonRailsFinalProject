@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   devise_for :users
   get 'jokes/new', to: 'jokes#new', as: 'new_joke'
   post 'jokes/', to: 'jokes#create'
+  get 'jokes/OSJokes', to: 'jokes#OSJokes', as: 'os'
   
 
   # The priority is based upon order of creation: first created -> highest priority.
