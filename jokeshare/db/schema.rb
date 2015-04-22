@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150408235105) do
+ActiveRecord::Schema.define(version: 20150422215300) do
 
   create_table "comments", force: true do |t|
     t.datetime "created_at"
@@ -19,8 +19,14 @@ ActiveRecord::Schema.define(version: 20150408235105) do
     t.string   "comment_content"
   end
 
-# Could not dump table "jokes" because of following NoMethodError
-#   undefined method `[]' for nil:NilClass
+  create_table "jokes", force: true do |t|
+    t.string   "content"
+    t.string   "jokeclass"
+    t.integer  "likes"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "user_id"
+  end
 
   create_table "users", force: true do |t|
     t.datetime "created_at"
