@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   root to: 'home#index'
   devise_for :users
+  get 'jokes/new', to: 'jokes#new', as: 'new_joke'
+  post 'jokes/', to: 'jokes#create'
   
 
   # The priority is based upon order of creation: first created -> highest priority.
