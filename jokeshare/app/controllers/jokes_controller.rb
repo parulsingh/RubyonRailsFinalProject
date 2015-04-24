@@ -15,7 +15,20 @@ class JokesController < ApplicationController
 		joke.save
 		redirect_to root_path
 	end
+	
 	def OSJokes
+		@joke = Joke.all
 		render :os
 	end
+
+	def NetworkingJokes
+		@joke = Joke.all
+		render :networking 
+	end
+
+	def GeneralJokes
+		@joke = Joke.all
+		render :cs
+	end
+
 end

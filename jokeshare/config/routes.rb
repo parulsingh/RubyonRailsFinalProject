@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   get 'jokes/new', to: 'jokes#new', as: 'new_joke'
   post 'jokes/', to: 'jokes#create'
   get 'jokes/OSJokes', to: 'jokes#OSJokes', as: 'os'
+  get 'jokes/NetworkingJokes', to: 'jokes#NetworkingJokes', as: 'networking'
+  get 'jokes/GeneralJokes', to: 'jokes#GeneralJokes', as: 'general'
   
 
   # The priority is based upon order of creation: first created -> highest priority.
