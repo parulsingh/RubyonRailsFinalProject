@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   get 'jokes/OSJokes', to: 'jokes#OSJokes', as: 'os'
   get 'jokes/NetworkingJokes', to: 'jokes#NetworkingJokes', as: 'networking'
   get 'jokes/GeneralJokes', to: 'jokes#GeneralJokes', as: 'general'
-  
+  mount Commontator::Engine => '/commontator'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

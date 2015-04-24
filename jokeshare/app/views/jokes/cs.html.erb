@@ -2,5 +2,6 @@
 
   <% if joke.jokeclass == 'General' %>
   	<p> <%= joke.content %></p>
+  	<%= commontator_thread(joke) %>
   <% end %>
 <% end %>

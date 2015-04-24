@@ -1,6 +1,7 @@
-<% @joke.each do |joke| %>
+<% @joke.each do |joke|  %>
 
   <% if joke.jokeclass == 'OS' %>
   	<p> <%= joke.content %></p>
+  <%= commontator_thread(joke) %>
   <% end %>
 <% end %>

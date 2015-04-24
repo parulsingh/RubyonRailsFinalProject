@@ -5,4 +5,5 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 	has_many :comment
 	has_one :joke
+	acts_as_commontator
 end
