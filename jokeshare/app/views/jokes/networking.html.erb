@@ -2,9 +2,13 @@
 <% @joke.each do |joke| %>
 
   <% if joke.jokeclass == 'Networking' %>
-  	<h3> <%= joke.content %></h3>
-	<%= commontator_thread(joke) %>
-	  <%=link_to "upvote",{:controller => "jokes", :action => "upvote", :id => joke.id }, method: :put %>
-  <%= joke.score %>
+  	  <div class="jumbotron">
+      <div class="container">
+		<h3> <%= joke.content %></h3>
+  		<%= commontator_thread(joke) %>
+  	  	<%=link_to "upvote",{:controller => "jokes", :action => "upvote", :id => joke.id }, method: :put %>
+ 		 <%= joke.score %>
+      </div>
+    </div>
   <% end %>
 <% end %>
