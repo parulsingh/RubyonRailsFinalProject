@@ -1,9 +1,64 @@
-<h1>JokeShare</h1>
-<p> <%= link_to 'Sign Up', new_user_registration_path%>  </p>
-<p> <%= link_to 'Log In', new_user_session_path%>  </p>
-<p> <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>  </p>
-<p> <%= link_to('Create New Joke', new_joke_path) %>  </p>
-<p> <%= link_to('OS Jokes', os_path) %>  </p>
-<p> <%= link_to('Networking Jokes', networking_path) %>  </p>
-<p> <%= link_to('General CS Jokes', general_path) %>  </p> 
 
+
+<html>
+
+  <head>
+
+    <link href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/shift.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">
+    <link rel="stylesheet" href="main.css">
+    
+  </head>
+
+  <body>
+    <div class="nav">
+      <div class="container">
+        <ul class="pull-left">
+<li> <%= link_to 'Sign Up', new_user_registration_path%>  </li>
+<li><%= link_to 'Log In', new_user_session_path%>  </li>
+<li> <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>  </li>
+        </ul>
+        <ul class="pull-right">
+
+
+<li>  <%= link_to('Create New Joke', new_joke_path) %>  </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="jumbotron">
+      <div class="container">
+        <h1>JokeShare</h1>
+        <p>Share topic specific jokes with other CS majors</p>
+      </div>
+    </div>
+    
+    <div class="neighborhood-guides">
+         <div class="container">
+            <h2>Joke Categories</h2>
+            <div class="row">
+                <div style="text-align:center" class="col-md-4">
+                	<h3><%= link_to('General CS Jokes', general_path) %></h3>
+                    <div class="thumbnail">
+                      <img src="http://cfcc.edu/blogs/lrc/files/2011/03/computer-clip-art.png" >
+                    </div>
+                </div>
+                <div style="text-align:center" class="col-md-4">
+                    <h3 ><%= link_to('Networking Jokes', networking_path) %></h3>
+                    <div class="thumbnail">
+                      <img src="http://www.clker.com/cliparts/V/C/l/u/F/j/applications-internet-md.png" >
+                    </div>
+                </div>
+                <div style="text-align:center" class="col-md-4">
+                    <h3><%= link_to('OS Jokes', os_path) %> </h3>
+                    <div class="thumbnail">
+                      <img src="http://cliparts.co/cliparts/dc9/XgX/dc9XgXqc7.png" >
+                    </div>
+                </div>
+            </div>
+         </div>
+    </div>
+
+  </body>
+</html>
