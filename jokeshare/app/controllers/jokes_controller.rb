@@ -31,4 +31,10 @@ class JokesController < ApplicationController
 		render :cs
 	end
 
+	def upvote
+	  @joke = Joke.find(params[:id])
+	  @joke.upvote_by current_user
+	  redirect_to os_path
+	end
+
 end

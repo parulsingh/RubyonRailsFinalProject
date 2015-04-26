@@ -1,7 +1,11 @@
+<h1>OS Jokes </h1>
+<%= params %>
 <% @joke.each do |joke|  %>
 
   <% if joke.jokeclass == 'OS' %>
   	<p> <%= joke.content %></p>
   <%= commontator_thread(joke) %>
+  <%=link_to "upvote",{:controller => "jokes", :action => "upvote", :id => joke.id }, method: :put %>
+  <%= joke.score %>
   <% end %>
 <% end %>
