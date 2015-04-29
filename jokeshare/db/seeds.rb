@@ -6,4 +6,9 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-Joke.create(jokeclass: 'OS', content: 'Unix is user friendly. It’s just selective about who its friends are.')
+Course.create(subject:'Networking', image: 'https://brilliantek.com/wp-content/uploads/2014/03/2041589_orig.gif')
+networking = Course.where(:subject => 'Networking')[0]
+
+networking.jokes.create(jokeclass: 'Networking', content: 'Unix is user friendly. It’s just selective about who its friends are.')
+networking.jokes.create(jokeclass: 'Networking', content: 'You know it’s love when you memorize her IP number to skip DNS overhead.')
+networking.jokes.create(jokeclass: 'Networking', content: 'The best thing about 404 jokes is… wait, it’s around here somewhere…')
