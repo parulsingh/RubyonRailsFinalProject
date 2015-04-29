@@ -37,20 +37,21 @@
     </div>
     
     <div class="neighborhood-guides">
-         <% @courses.each do |course| %>
-         <div class="container">
-            <h2>Joke Categories</h2>
-            <div class="row">
-                <div style="text-align:center" class="col-md-4">
+         <h2>Joke Categories</h2>
+         <table>
+            
+            <tr>
+                <% @courses.each do |course| %>
+                <td style="text-align:center" class="col-md-3">
                 	<h3><%= link_to(course.subject, course_jokes_path(course_param: course.id)) %></h3>
                     <div class="thumbnail">
                       <img src= <%=course.image%> >
                     </div>
-                </div>
-               
-            </div>
-         </div>
-         <%end%>
+                </td>
+               <%end%>
+            </tr>
+         </table>
+         
     </div>
 
   </body>
