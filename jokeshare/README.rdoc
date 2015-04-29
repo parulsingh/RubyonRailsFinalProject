@@ -1,0 +1,42 @@
+Title: JokeShare
+Team Members: Parul Singh, Yash Desai
+Demo Link: railsdecal.com
+ 
+Idea: An application where students can create and post new CS jokes and other users can comment on the jokes, upvote comments, and like jokes.  
+ 
+Models and Description:
+
+User
+has name, major, email, password fields
+User has many Jokes
+
+Joke
+has content, jokeclass, likes, user_id, course_id fields
+Joke belongs to a User
+Joke belongs to a Course
+
+Course
+has a subject, image fields
+Course has many Jokes
+        	
+ Gems used:
+	Commontator
+	Devise
+	acts_as_votable
+	simple_form
+
+Features:
+Users can log in/log out
+Users can sign up
+Users can create new jokes
+Users can comment on jokes
+Users can upvote jokes
+Users can upvote/downvote comments
+Comments will display in order of their upvote count
+Users can create new Courses
+ 
+Division of Labor:
+Parul: Styled the app, added comments, comment upvote, joke upvote functionality
+Yash: Added Course model, added Course controller, added validations, set up Joke-Course relationship
+Both: Made Joke/User models, added Devise gem, added create new joke functionality
+
