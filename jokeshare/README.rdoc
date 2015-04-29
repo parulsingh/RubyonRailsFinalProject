@@ -19,11 +19,11 @@ Course
 has a subject, image fields
 Course has many Jokes
         	
- Gems used:
-	Commontator
-	Devise
-	acts_as_votable
-	simple_form
+Gems used:
+Commontator
+Devise
+acts_as_votable
+simple_form
 
 Features:
 Users can log in/log out
