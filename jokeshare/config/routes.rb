@@ -9,6 +9,11 @@ Rails.application.routes.draw do
   mount Commontator::Engine => '/commontator'
   put "like", to: "jokes#upvote"
 
+  get 'courses/jokes', to: 'courses#jokes', as: 'course_jokes'
+
+  get 'courses/new', to: 'courses#new', as: 'new_course'
+  post 'courses/', to: 'courses#create'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

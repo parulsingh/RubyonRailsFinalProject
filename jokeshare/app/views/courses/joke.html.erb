@@ -1,7 +1,9 @@
-<h1>OS Jokes </h1>
-<% @joke.each do |joke|  %>
+<h1> <%= @course.subject %> Jokes  </h1>
 
-  <% if joke.jokeclass == 'OS' %>
+<h3><%=link_to "return home", root_path%></h3>
+<%= @jokes.each do |joke|  %>
+
+	
   <div class="jumbotron">
       <div class="container">
 		<h3> <%= joke.content %></h3>
@@ -10,5 +12,5 @@
  		 <%= joke.score %>
       </div>
     </div>
-  <% end %>
+
 <% end %>

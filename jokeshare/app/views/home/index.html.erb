@@ -23,6 +23,8 @@
 
 
 <li>  <%= link_to('Create New Joke', new_joke_path) %>  </li>
+<li>  <%= link_to('Create New Course', new_course_path) %>  </li>
+
         </ul>
       </div>
     </div>
@@ -35,29 +37,20 @@
     </div>
     
     <div class="neighborhood-guides">
+         <% @courses.each do |course| %>
          <div class="container">
             <h2>Joke Categories</h2>
             <div class="row">
                 <div style="text-align:center" class="col-md-4">
-                	<h3><%= link_to('General CS Jokes', general_path) %></h3>
+                	<h3><%= link_to(course.subject, course_jokes_path(course_param: course.id)) %></h3>
                     <div class="thumbnail">
-                      <img src="http://cfcc.edu/blogs/lrc/files/2011/03/computer-clip-art.png" >
+                      <img src= <%=course.image%> >
                     </div>
                 </div>
-                <div style="text-align:center" class="col-md-4">
-                    <h3 ><%= link_to('Networking Jokes', networking_path) %></h3>
-                    <div class="thumbnail">
-                      <img src="http://www.clker.com/cliparts/V/C/l/u/F/j/applications-internet-md.png" >
-                    </div>
-                </div>
-                <div style="text-align:center" class="col-md-4">
-                    <h3><%= link_to('OS Jokes', os_path) %> </h3>
-                    <div class="thumbnail">
-                      <img src="http://cliparts.co/cliparts/dc9/XgX/dc9XgXqc7.png" >
-                    </div>
-                </div>
+               
             </div>
          </div>
+         <%end%>
     </div>
 
   </body>

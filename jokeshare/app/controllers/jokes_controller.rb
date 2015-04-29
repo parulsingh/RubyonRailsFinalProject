@@ -2,17 +2,20 @@ class JokesController < ApplicationController
 
 	def new
 		@joke = Joke.new
+		@joke_class = Array.new
+		Course.all.each do |course|
+			@joke_class.push(course.subject)
+		end
+
 		render :new
 	end
 
 	def create
+
 		content = params[:joke][:content]
 		jokeclass = params[:joke][:jokeclass]
-		joke = Joke.new
-		joke.content = content
-		joke.jokeclass = jokeclass
-		joke.user_id = current_user
-		joke.save
+		course = Course.where(:subject => jokeclass)[0]
+		course.jokes.create(content: content, jokeclass: jokeclass, user_id: current_user)
 		redirect_to root_path
 	end
 	

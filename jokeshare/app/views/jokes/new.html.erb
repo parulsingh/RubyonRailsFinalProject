@@ -1,6 +1,6 @@
 <%= flash[:error] %>
 <%= simple_form_for @joke do |f| %>
-  <%= f.input :jokeclass, label: 'Joke Class eg. Networking' %>
+  <%= f.input :jokeclass, :label => "Joke Class", :collection => @joke_class, :selected => "lead" %>
   <%= f.input :content, label: 'Joke Content' %>
   <%= f.button :submit %>
 <% end %>

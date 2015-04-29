@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150424011855) do
+ActiveRecord::Schema.define(version: 20150429062141) do
 
   create_table "comments", force: true do |t|
     t.datetime "created_at"
@@ -61,6 +61,13 @@ ActiveRecord::Schema.define(version: 20150424011855) do
 
   add_index "commontator_threads", ["commontable_id", "commontable_type"], name: "index_commontator_threads_on_c_id_and_c_type", unique: true
 
+  create_table "courses", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "subject"
+    t.string   "image"
+  end
+
   create_table "jokes", force: true do |t|
     t.string   "content"
     t.string   "jokeclass"
@@ -68,6 +75,7 @@ ActiveRecord::Schema.define(version: 20150424011855) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "user_id"
+    t.integer  "course_id"
   end
 
   create_table "users", force: true do |t|

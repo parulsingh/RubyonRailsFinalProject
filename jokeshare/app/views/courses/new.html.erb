@@ -1,0 +1,6 @@
+<%= flash[:error] %>
+<%= simple_form_for @course do |f| %>
+  <%= f.input :subject, label: 'Subject of Class Ex. Networking, Operating Systems' %>
+  <%= f.input :image, label: 'Paste an html link of an image for the class' %>
+  <%= f.button :submit %>
+<% end %>
